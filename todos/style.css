@@ -20,6 +20,9 @@ input[type=text]:focus{
 .delete{
   cursor: pointer;
 }
+.delete:hover{
+  color: crimson;
+}
 .filtered{
   display: none !important;
 }
