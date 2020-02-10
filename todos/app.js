@@ -2,6 +2,7 @@ const addForm = document.querySelector('.add');
 const list = document.querySelector('.todos');
 const search = document.querySelector('.search input');
 
+// inner HTML template
 const generateTemplate = todo => {
   const html = `
     <li class="list-group-item d-flex justify-content-between align-items-center">
