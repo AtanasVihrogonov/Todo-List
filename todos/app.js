@@ -13,7 +13,7 @@ const generateTemplate = todo => {
   list.innerHTML += html;
 }
 
-// add todos
+// add todos event
 addForm.addEventListener('submit', e => {
   e.preventDefault();
   const todo = addForm.add.value.trim();
@@ -32,10 +32,13 @@ list.addEventListener('click', e => {
 });
 
 const filterTodos = (term) => {
+
+  // add filtered class
   Array.from(list.children)
     .filter((todo) => !todo.textContent.toLowerCase().includes(term))
     .forEach((todo) => todo.classList.add('filtered'));
 
+    // remove filtered class
   Array.from(list.children)
     .filter((todo) => todo.textContent.toLowerCase().includes(term))
     .forEach((todo) => todo.classList.remove('filtered'));
